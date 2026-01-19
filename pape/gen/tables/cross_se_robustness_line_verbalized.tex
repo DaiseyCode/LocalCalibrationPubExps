@@ -1,0 +1,30 @@
+% Generated from git commit 5067cff (dirty)
+
+\begin{table*}[htbp]
+% Note: Add \usepackage{booktabs}, \usepackage{amssymb}, \usepackage{multirow}, \usepackage{makecell}, and \usepackage{graphicx} to document preamble
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l l c c c c c c c c c c}
+\toprule
+ &  & \multicolumn{5}{c}{Line-Level} & \multicolumn{5}{c}{Token-Level} \\
+ &  & \multicolumn{3}{c}{Unscaled} & \multicolumn{2}{c}{Scaled} & \multicolumn{3}{c}{Unscaled} & \multicolumn{2}{c}{Scaled} \\
+\cmidrule(lr){3-5}
+\cmidrule(lr){6-7}
+\cmidrule(lr){8-10}
+\cmidrule(lr){11-12}
+\mutt & Eval Dataset & BSS $\uparrow$ & ECE $\downarrow$ & AUC $\uparrow$ & BSS $\uparrow$ & ECE $\downarrow$ & BSS $\uparrow$ & ECE $\downarrow$ & AUC $\uparrow$ & BSS $\uparrow$ & ECE $\downarrow$ \\
+\midrule
+GPT-4o & HumanEval+ & 0.37 & 0.04 & 0.94 & 0.36 & 0.02 & -1.10 & 0.06 & 0.90 & 0.06 & 0.00 \\
+GPT-4o & MBPP+ & 0.23 & 0.11 & 0.73 & 0.21 & 0.16 & 0.06 & 0.11 & 0.65 & 0.12 & 0.13 \\
+GPT-4o & LiveCodeBench & -0.12 & 0.23 & 0.75 & 0.16 & 0.12 & -0.07 & 0.18 & 0.73 & 0.11 & 0.09 \\
+GPT-4o & RepoCod-s & -0.98 & 0.49 & 0.63 & 0.03 & 0.07 & -0.52 & 0.36 & 0.60 & 0.03 & 0.02 \\
+Qwen2.5Coder & HumanEval+ & 0.09 & 0.13 & 0.79 & 0.19 & 0.08 & -0.51 & 0.08 & 0.79 & 0.18 & 0.02 \\
+Qwen2.5Coder & MBPP+ & 0.36 & 0.09 & 0.83 & 0.39 & 0.04 & 0.06 & 0.08 & 0.76 & 0.17 & 0.03 \\
+Qwen2.5Coder & LiveCodeBench & -0.82 & 0.46 & 0.73 & 0.12 & 0.09 & -0.31 & 0.29 & 0.66 & 0.06 & 0.07 \\
+Qwen2.5Coder & RepoCod-s & -1.70 & 0.61 & 0.60 & 0.00 & 0.03 & -1.00 & 0.51 & 0.55 & -0.00 & 0.00 \\
+\bottomrule
+\end{tabular}
+}%
+\caption{\textbf{Line Verbalized} split by dataset for each generating Model Under Test (\mutt).}
+\label{tab:cross_se_robustness_line_verbalized}
+\end{table*}

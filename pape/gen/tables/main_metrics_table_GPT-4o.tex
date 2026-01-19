@@ -1,0 +1,27 @@
+% Generated on 2025-09-13 02:25:29 from git commit unknown
+
+\begin{table*}[htbp]
+% Note: Add \usepackage{booktabs}, \usepackage{amssymb}, \usepackage{multirow}, \usepackage{makecell}, and \usepackage{graphicx} to document preamble
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l c c c c c c c c c c}
+\toprule
+ & \multicolumn{5}{c}{Line-Level} & \multicolumn{5}{c}{Token-Level} \\
+ & \multicolumn{3}{c}{Unscaled} & \multicolumn{2}{c}{Scaled} & \multicolumn{3}{c}{Unscaled} & \multicolumn{2}{c}{Scaled} \\
+\cmidrule(lr){2-4}
+\cmidrule(lr){5-6}
+\cmidrule(lr){7-9}
+\cmidrule(lr){10-11}
+Technique & BSS $\uparrow$ & ECE $\downarrow$ & AUC $\uparrow$ & BSS $\uparrow$ & ECE $\downarrow$ & BSS $\uparrow$ & ECE $\downarrow$ & AUC $\uparrow$ & BSS $\uparrow$ & ECE $\downarrow$ \\
+\midrule
+Token Prob & -0.34 & 0.29 & 0.61 & 0.03 & 0.01 & -0.28 & 0.24 & 0.61 & 0.02 & 0.00 \\
+Multisampling & -0.13 & 0.20 & 0.72 & 0.13 & 0.03 & -0.16 & 0.20 & 0.73 & 0.13 & 0.03 \\
+Line Verbalized & -0.18 & 0.26 & 0.75 & 0.17 & 0.11 & -0.11 & 0.21 & 0.72 & 0.11 & 0.09 \\
+Probe-0.5B & 0.17 & 0.05 & 0.76 & 0.19 & 0.02 & 0.13 & 0.05 & 0.74 & 0.14 & 0.02 \\
+Probe-7B & 0.16 & 0.10 & 0.78 & 0.22 & 0.02 & 0.14 & 0.07 & 0.76 & 0.17 & 0.03 \\
+\bottomrule
+\end{tabular}
+}%
+\caption{Calibration Results for GPT-4o with various techniques. We show both unscaled and Platt scaled results and localizing at the line and token level.}
+\label{tab:main_metrics_GPT_4o}
+\end{table*}

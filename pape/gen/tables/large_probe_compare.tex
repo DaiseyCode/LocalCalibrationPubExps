@@ -1,0 +1,50 @@
+% Generated from git commit unknown
+
+\begin{table*}[htbp]
+% Note: Add \usepackage{booktabs}, \usepackage{amssymb}, \usepackage{multirow}, \usepackage{makecell}, and \usepackage{graphicx} to document preamble
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l c c c c c c c c c c c c c c c c c c c}
+\toprule
+ &  &  &  &  & \multicolumn{5}{c}{Line-Level} & \multicolumn{5}{c}{Token-Level} & \multicolumn{5}{c}{Problem-Level} \\
+ &  &  &  &  & \multicolumn{3}{c}{Unscaled} & \multicolumn{2}{c}{Scaled} & \multicolumn{3}{c}{Unscaled} & \multicolumn{2}{c}{Scaled} & \multicolumn{3}{c}{Unscaled} & \multicolumn{2}{c}{Scaled} \\
+\cmidrule(lr){6-8}
+\cmidrule(lr){9-10}
+\cmidrule(lr){11-13}
+\cmidrule(lr){14-15}
+\cmidrule(lr){16-18}
+\cmidrule(lr){19-20}
+embed\_lm\_name & embedding\_style & hidden\_dim & agg\_style & loss\_style & BSS $\uparrow$ & ECE $\downarrow$ & AUC $\uparrow$ & BSS $\uparrow$ & ECE $\downarrow$ & BSS $\uparrow$ & ECE $\downarrow$ & AUC $\uparrow$ & BSS $\uparrow$ & ECE $\downarrow$ & BSS $\uparrow$ & ECE $\downarrow$ & AUC $\uparrow$ & BSS $\uparrow$ & ECE $\downarrow$ \\
+\midrule
+Qwen/Qwen2.5-Coder-0.5B & middle\_layer & 64 & max\_pool & bce & 0.20 & 0.04 & 0.77 & 0.21 & 0.02 & 0.14 & 0.03 & 0.75 & 0.15 & 0.02 & 0.31 & 0.07 & 0.83 & 0.32 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & middle\_layer & 64 & max\_pool & fl2 & 0.10 & 0.13 & 0.77 & 0.20 & 0.02 & -0.00 & 0.15 & 0.74 & 0.14 & 0.02 & 0.23 & 0.15 & 0.84 & 0.33 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & middle\_layer & 64 & max\_pool & brier & 0.20 & 0.03 & 0.77 & 0.20 & 0.02 & 0.14 & 0.04 & 0.75 & 0.15 & 0.02 & 0.31 & 0.07 & 0.83 & 0.31 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & middle\_layer & 64 & avg\_pool & bce & 0.19 & 0.05 & 0.77 & 0.20 & 0.02 & 0.09 & 0.10 & 0.75 & 0.15 & 0.01 & 0.20 & 0.13 & 0.82 & 0.31 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & middle\_layer & 64 & avg\_pool & fl2 & 0.08 & 0.14 & 0.77 & 0.21 & 0.02 & -0.03 & 0.17 & 0.75 & 0.15 & 0.01 & 0.13 & 0.16 & 0.82 & 0.30 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & middle\_layer & 64 & avg\_pool & brier & 0.19 & 0.05 & 0.77 & 0.21 & 0.02 & 0.09 & 0.09 & 0.75 & 0.15 & 0.02 & 0.18 & 0.13 & 0.82 & 0.29 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & middle\_layer & 64 & mha\_pool\_4\_heads & bce & 0.20 & 0.04 & 0.77 & 0.21 & 0.02 & 0.15 & 0.04 & 0.75 & 0.15 & 0.02 & 0.32 & 0.07 & 0.84 & 0.33 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & middle\_layer & 64 & mha\_pool\_4\_heads & fl2 & 0.10 & 0.13 & 0.77 & 0.21 & 0.02 & 0.04 & 0.13 & 0.75 & 0.15 & 0.02 & 0.16 & 0.16 & 0.82 & 0.30 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & middle\_layer & 64 & mha\_pool\_4\_heads & brier & 0.19 & 0.05 & 0.77 & 0.20 & 0.02 & 0.14 & 0.04 & 0.75 & 0.15 & 0.01 & 0.30 & 0.09 & 0.83 & 0.32 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & last\_layer & 64 & max\_pool & bce & 0.13 & 0.11 & 0.76 & 0.19 & 0.03 & 0.10 & 0.05 & 0.73 & 0.12 & 0.02 & 0.16 & 0.16 & 0.80 & 0.26 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & last\_layer & 64 & max\_pool & fl2 & 0.14 & 0.08 & 0.75 & 0.17 & 0.03 & 0.02 & 0.12 & 0.72 & 0.11 & 0.02 & 0.23 & 0.07 & 0.78 & 0.23 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & last\_layer & 64 & max\_pool & brier & 0.14 & 0.09 & 0.76 & 0.18 & 0.03 & 0.10 & 0.03 & 0.72 & 0.11 & 0.02 & 0.14 & 0.15 & 0.79 & 0.24 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & last\_layer & 64 & avg\_pool & bce & 0.21 & 0.04 & 0.78 & 0.21 & 0.02 & 0.01 & 0.12 & 0.72 & 0.12 & 0.02 & 0.23 & 0.10 & 0.82 & 0.29 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & last\_layer & 64 & avg\_pool & fl2 & 0.10 & 0.14 & 0.78 & 0.22 & 0.02 & -0.02 & 0.16 & 0.73 & 0.13 & 0.01 & 0.15 & 0.15 & 0.82 & 0.29 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & last\_layer & 64 & avg\_pool & brier & 0.20 & 0.06 & 0.78 & 0.22 & 0.03 & 0.01 & 0.12 & 0.73 & 0.12 & 0.04 & 0.22 & 0.12 & 0.82 & 0.29 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & last\_layer & 64 & mha\_pool\_4\_heads & bce & 0.13 & 0.10 & 0.75 & 0.18 & 0.03 & 0.10 & 0.05 & 0.72 & 0.12 & 0.01 & 0.19 & 0.14 & 0.79 & 0.24 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & last\_layer & 64 & mha\_pool\_4\_heads & fl2 & 0.15 & 0.09 & 0.76 & 0.19 & 0.03 & 0.05 & 0.11 & 0.72 & 0.12 & 0.01 & 0.25 & 0.07 & 0.80 & 0.26 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & last\_layer & 64 & mha\_pool\_4\_heads & brier & 0.17 & 0.07 & 0.76 & 0.20 & 0.02 & 0.10 & 0.05 & 0.73 & 0.12 & 0.01 & 0.22 & 0.11 & 0.80 & 0.26 & 0.04 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters & 64 & max\_pool & bce & 0.16 & 0.09 & 0.77 & 0.20 & 0.02 & 0.14 & 0.05 & 0.76 & 0.16 & 0.02 & 0.23 & 0.13 & 0.83 & 0.30 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters & 64 & max\_pool & fl2 & 0.14 & 0.11 & 0.77 & 0.21 & 0.02 & 0.04 & 0.13 & 0.75 & 0.16 & 0.02 & 0.25 & 0.11 & 0.82 & 0.30 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters & 64 & max\_pool & brier & 0.17 & 0.08 & 0.77 & 0.20 & 0.02 & 0.14 & 0.04 & 0.75 & 0.15 & 0.03 & 0.25 & 0.10 & 0.82 & 0.29 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters & 64 & avg\_pool & bce & 0.20 & 0.06 & 0.79 & 0.23 & 0.02 & 0.10 & 0.10 & 0.76 & 0.16 & 0.02 & 0.19 & 0.14 & 0.84 & 0.32 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters & 64 & avg\_pool & fl2 & 0.12 & 0.14 & 0.79 & 0.24 & 0.02 & -0.00 & 0.17 & 0.77 & 0.17 & 0.01 & 0.17 & 0.17 & 0.84 & 0.33 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters & 64 & avg\_pool & brier & 0.21 & 0.06 & 0.79 & 0.23 & 0.03 & 0.07 & 0.13 & 0.76 & 0.17 & 0.02 & 0.24 & 0.12 & 0.83 & 0.32 & 0.04 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters & 64 & mha\_pool\_4\_heads & bce & 0.17 & 0.07 & 0.77 & 0.20 & 0.02 & 0.15 & 0.05 & 0.76 & 0.16 & 0.01 & 0.26 & 0.09 & 0.82 & 0.28 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters & 64 & mha\_pool\_4\_heads & fl2 & 0.13 & 0.12 & 0.78 & 0.23 & 0.02 & 0.06 & 0.13 & 0.77 & 0.17 & 0.01 & 0.24 & 0.14 & 0.84 & 0.34 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters & 64 & mha\_pool\_4\_heads & brier & 0.17 & 0.09 & 0.78 & 0.21 & 0.03 & 0.14 & 0.06 & 0.76 & 0.16 & 0.02 & 0.26 & 0.10 & 0.82 & 0.29 & 0.05 \\
+\bottomrule
+\end{tabular}
+}%
+\caption{Large Probe Comparison}
+\label{tab:large_probe_compare}
+\end{table*}

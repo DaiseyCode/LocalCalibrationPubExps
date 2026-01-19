@@ -1,0 +1,203 @@
+% Generated from git commit eec8c36 (dirty)
+
+\begin{table*}[htbp]
+% Note: Add \usepackage{booktabs}, \usepackage{amssymb}, \usepackage{multirow}, \usepackage{makecell}, and \usepackage{graphicx} to document preamble
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l c c c c c c c c c c c c c c c c c c c}
+\toprule
+ &  &  &  &  & \multicolumn{5}{c}{Line-Level} & \multicolumn{5}{c}{Token-Level} & \multicolumn{5}{c}{Problem-Level} \\
+ &  &  &  &  & \multicolumn{3}{c}{Unscaled} & \multicolumn{2}{c}{Scaled} & \multicolumn{3}{c}{Unscaled} & \multicolumn{2}{c}{Scaled} & \multicolumn{3}{c}{Unscaled} & \multicolumn{2}{c}{Scaled} \\
+\cmidrule(lr){6-8}
+\cmidrule(lr){9-10}
+\cmidrule(lr){11-13}
+\cmidrule(lr){14-15}
+\cmidrule(lr){16-18}
+\cmidrule(lr){19-20}
+embed\_lm\_name & embedding\_style & hidden\_dim & agg\_style & loss\_style & BSS $\uparrow$ & ECE $\downarrow$ & AUC $\uparrow$ & BSS $\uparrow$ & ECE $\downarrow$ & BSS $\uparrow$ & ECE $\downarrow$ & AUC $\uparrow$ & BSS $\uparrow$ & ECE $\downarrow$ & BSS $\uparrow$ & ECE $\downarrow$ & AUC $\uparrow$ & BSS $\uparrow$ & ECE $\downarrow$ \\
+\midrule
+Qwen/Qwen2.5-Coder-0.5B & middle\_layer & 32 & max\_pool & bce & 0.29 & 0.06 & 0.83 & 0.32 & 0.02 & 0.19 & 0.06 & 0.78 & 0.22 & 0.02 & 0.37 & 0.10 & 0.86 & 0.40 & 0.04 \\
+Qwen/Qwen2.5-Coder-0.5B & middle\_layer & 32 & max\_pool & fl2 & 0.18 & 0.14 & 0.82 & 0.30 & 0.02 & 0.11 & 0.13 & 0.77 & 0.21 & 0.02 & 0.29 & 0.14 & 0.85 & 0.37 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & middle\_layer & 32 & max\_pool & brier & 0.30 & 0.05 & 0.82 & 0.31 & 0.02 & 0.20 & 0.05 & 0.77 & 0.21 & 0.02 & 0.37 & 0.09 & 0.86 & 0.39 & 0.07 \\
+Qwen/Qwen2.5-Coder-0.5B & middle\_layer & 32 & avg\_pool & bce & 0.24 & 0.07 & 0.80 & 0.26 & 0.02 & 0.09 & 0.16 & 0.77 & 0.21 & 0.01 & 0.23 & 0.15 & 0.85 & 0.35 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & middle\_layer & 32 & avg\_pool & fl2 & 0.12 & 0.16 & 0.79 & 0.26 & 0.02 & 0.08 & 0.14 & 0.77 & 0.21 & 0.02 & 0.11 & 0.19 & 0.84 & 0.34 & 0.07 \\
+Qwen/Qwen2.5-Coder-0.5B & middle\_layer & 32 & avg\_pool & brier & 0.22 & 0.09 & 0.80 & 0.26 & 0.02 & 0.12 & 0.12 & 0.77 & 0.21 & 0.02 & 0.19 & 0.17 & 0.85 & 0.35 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & middle\_layer & 32 & mha\_pool\_4\_heads & bce & 0.29 & 0.07 & 0.82 & 0.31 & 0.02 & 0.21 & 0.05 & 0.78 & 0.22 & 0.02 & 0.36 & 0.08 & 0.85 & 0.37 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & middle\_layer & 32 & mha\_pool\_4\_heads & fl2 & 0.17 & 0.15 & 0.81 & 0.30 & 0.02 & 0.12 & 0.12 & 0.77 & 0.21 & 0.02 & 0.21 & 0.17 & 0.85 & 0.36 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & middle\_layer & 32 & mha\_pool\_4\_heads & brier & 0.28 & 0.07 & 0.82 & 0.31 & 0.02 & 0.20 & 0.06 & 0.78 & 0.22 & 0.02 & 0.34 & 0.09 & 0.85 & 0.37 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & middle\_layer & 64 & max\_pool & bce & 0.27 & 0.08 & 0.82 & 0.30 & 0.02 & 0.19 & 0.06 & 0.77 & 0.21 & 0.02 & 0.37 & 0.08 & 0.86 & 0.39 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & middle\_layer & 64 & max\_pool & fl2 & 0.19 & 0.14 & 0.82 & 0.30 & 0.02 & 0.09 & 0.13 & 0.77 & 0.20 & 0.02 & 0.28 & 0.14 & 0.86 & 0.38 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & middle\_layer & 64 & max\_pool & brier & 0.29 & 0.05 & 0.82 & 0.31 & 0.02 & 0.20 & 0.05 & 0.77 & 0.21 & 0.02 & 0.38 & 0.06 & 0.86 & 0.38 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & middle\_layer & 64 & avg\_pool & bce & 0.24 & 0.07 & 0.80 & 0.27 & 0.02 & 0.13 & 0.14 & 0.77 & 0.21 & 0.02 & 0.22 & 0.15 & 0.84 & 0.34 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & middle\_layer & 64 & avg\_pool & fl2 & 0.12 & 0.16 & 0.79 & 0.26 & 0.02 & 0.05 & 0.16 & 0.77 & 0.21 & 0.01 & 0.13 & 0.18 & 0.84 & 0.33 & 0.07 \\
+Qwen/Qwen2.5-Coder-0.5B & middle\_layer & 64 & avg\_pool & brier & 0.25 & 0.06 & 0.80 & 0.27 & 0.02 & 0.07 & 0.17 & 0.77 & 0.20 & 0.02 & 0.25 & 0.14 & 0.84 & 0.35 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & middle\_layer & 64 & mha\_pool\_4\_heads & bce & 0.30 & 0.05 & 0.82 & 0.31 & 0.02 & 0.21 & 0.05 & 0.78 & 0.22 & 0.01 & 0.37 & 0.07 & 0.86 & 0.37 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & middle\_layer & 64 & mha\_pool\_4\_heads & fl2 & 0.16 & 0.16 & 0.81 & 0.29 & 0.02 & 0.12 & 0.12 & 0.77 & 0.21 & 0.02 & 0.20 & 0.17 & 0.85 & 0.36 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & middle\_layer & 64 & mha\_pool\_4\_heads & brier & 0.28 & 0.07 & 0.82 & 0.30 & 0.02 & 0.21 & 0.04 & 0.78 & 0.22 & 0.02 & 0.33 & 0.11 & 0.85 & 0.37 & 0.07 \\
+Qwen/Qwen2.5-Coder-0.5B & three\_quarters\_layer & 32 & max\_pool & bce & 0.28 & 0.08 & 0.83 & 0.32 & 0.02 & 0.19 & 0.06 & 0.77 & 0.21 & 0.02 & 0.34 & 0.10 & 0.86 & 0.38 & 0.04 \\
+Qwen/Qwen2.5-Coder-0.5B & three\_quarters\_layer & 32 & max\_pool & fl2 & 0.22 & 0.13 & 0.82 & 0.31 & 0.02 & 0.10 & 0.12 & 0.76 & 0.20 & 0.02 & 0.32 & 0.12 & 0.86 & 0.38 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & three\_quarters\_layer & 32 & max\_pool & brier & 0.29 & 0.08 & 0.83 & 0.32 & 0.02 & 0.18 & 0.06 & 0.77 & 0.21 & 0.02 & 0.36 & 0.08 & 0.85 & 0.37 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & three\_quarters\_layer & 32 & avg\_pool & bce & 0.29 & 0.07 & 0.82 & 0.31 & 0.02 & 0.08 & 0.17 & 0.77 & 0.21 & 0.01 & 0.29 & 0.13 & 0.86 & 0.37 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & three\_quarters\_layer & 32 & avg\_pool & fl2 & 0.15 & 0.16 & 0.81 & 0.29 & 0.02 & 0.07 & 0.15 & 0.77 & 0.21 & 0.01 & 0.15 & 0.19 & 0.85 & 0.37 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & three\_quarters\_layer & 32 & avg\_pool & brier & 0.27 & 0.07 & 0.82 & 0.30 & 0.02 & 0.08 & 0.16 & 0.77 & 0.20 & 0.03 & 0.27 & 0.13 & 0.86 & 0.37 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & three\_quarters\_layer & 32 & mha\_pool\_4\_heads & bce & 0.30 & 0.07 & 0.83 & 0.32 & 0.02 & 0.20 & 0.05 & 0.78 & 0.22 & 0.01 & 0.36 & 0.09 & 0.87 & 0.40 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & three\_quarters\_layer & 32 & mha\_pool\_4\_heads & fl2 & 0.20 & 0.15 & 0.83 & 0.32 & 0.02 & 0.12 & 0.12 & 0.77 & 0.20 & 0.01 & 0.24 & 0.16 & 0.86 & 0.38 & 0.04 \\
+Qwen/Qwen2.5-Coder-0.5B & three\_quarters\_layer & 32 & mha\_pool\_4\_heads & brier & 0.31 & 0.03 & 0.83 & 0.32 & 0.02 & 0.21 & 0.03 & 0.77 & 0.21 & 0.01 & 0.38 & 0.06 & 0.86 & 0.38 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & three\_quarters\_layer & 64 & max\_pool & bce & 0.28 & 0.07 & 0.83 & 0.32 & 0.02 & 0.18 & 0.06 & 0.77 & 0.21 & 0.02 & 0.30 & 0.12 & 0.85 & 0.36 & 0.07 \\
+Qwen/Qwen2.5-Coder-0.5B & three\_quarters\_layer & 64 & max\_pool & fl2 & 0.22 & 0.14 & 0.83 & 0.32 & 0.02 & 0.11 & 0.12 & 0.77 & 0.20 & 0.02 & 0.31 & 0.13 & 0.86 & 0.39 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & three\_quarters\_layer & 64 & max\_pool & brier & 0.31 & 0.05 & 0.83 & 0.32 & 0.02 & 0.20 & 0.03 & 0.77 & 0.20 & 0.02 & 0.33 & 0.12 & 0.86 & 0.38 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & three\_quarters\_layer & 64 & avg\_pool & bce & 0.26 & 0.08 & 0.82 & 0.30 & 0.02 & 0.14 & 0.12 & 0.77 & 0.21 & 0.01 & 0.20 & 0.18 & 0.86 & 0.38 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & three\_quarters\_layer & 64 & avg\_pool & fl2 & 0.14 & 0.17 & 0.81 & 0.29 & 0.02 & 0.06 & 0.16 & 0.77 & 0.20 & 0.01 & 0.14 & 0.20 & 0.85 & 0.36 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & three\_quarters\_layer & 64 & avg\_pool & brier & 0.27 & 0.07 & 0.81 & 0.29 & 0.03 & 0.07 & 0.16 & 0.77 & 0.20 & 0.03 & 0.27 & 0.14 & 0.86 & 0.37 & 0.04 \\
+Qwen/Qwen2.5-Coder-0.5B & three\_quarters\_layer & 64 & mha\_pool\_4\_heads & bce & 0.31 & 0.06 & 0.83 & 0.33 & 0.02 & 0.20 & 0.06 & 0.78 & 0.22 & 0.02 & 0.37 & 0.08 & 0.86 & 0.38 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & three\_quarters\_layer & 64 & mha\_pool\_4\_heads & fl2 & 0.19 & 0.15 & 0.83 & 0.32 & 0.02 & 0.13 & 0.12 & 0.77 & 0.21 & 0.02 & 0.24 & 0.18 & 0.86 & 0.39 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & three\_quarters\_layer & 64 & mha\_pool\_4\_heads & brier & 0.29 & 0.05 & 0.83 & 0.32 & 0.02 & 0.19 & 0.04 & 0.77 & 0.21 & 0.01 & 0.38 & 0.08 & 0.86 & 0.39 & 0.04 \\
+Qwen/Qwen2.5-Coder-0.5B & last\_layer & 32 & max\_pool & bce & 0.27 & 0.08 & 0.82 & 0.30 & 0.02 & 0.17 & 0.05 & 0.75 & 0.17 & 0.02 & 0.22 & 0.15 & 0.83 & 0.32 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & last\_layer & 32 & max\_pool & fl2 & 0.23 & 0.09 & 0.81 & 0.29 & 0.02 & 0.10 & 0.10 & 0.74 & 0.16 & 0.03 & 0.32 & 0.08 & 0.84 & 0.34 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & last\_layer & 32 & max\_pool & brier & 0.23 & 0.11 & 0.81 & 0.29 & 0.02 & 0.15 & 0.06 & 0.75 & 0.17 & 0.02 & 0.25 & 0.14 & 0.84 & 0.34 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & last\_layer & 32 & avg\_pool & bce & 0.24 & 0.11 & 0.82 & 0.30 & 0.02 & 0.10 & 0.11 & 0.75 & 0.18 & 0.02 & 0.15 & 0.20 & 0.84 & 0.35 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & last\_layer & 32 & avg\_pool & fl2 & 0.16 & 0.15 & 0.81 & 0.29 & 0.03 & 0.07 & 0.13 & 0.75 & 0.17 & 0.02 & 0.15 & 0.19 & 0.84 & 0.35 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & last\_layer & 32 & avg\_pool & brier & 0.30 & 0.05 & 0.82 & 0.31 & 0.04 & 0.04 & 0.13 & 0.73 & 0.12 & 0.07 & 0.32 & 0.10 & 0.85 & 0.36 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & last\_layer & 32 & mha\_pool\_4\_heads & bce & 0.26 & 0.08 & 0.81 & 0.29 & 0.02 & 0.15 & 0.07 & 0.75 & 0.18 & 0.02 & 0.25 & 0.12 & 0.83 & 0.31 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & last\_layer & 32 & mha\_pool\_4\_heads & fl2 & 0.24 & 0.10 & 0.81 & 0.29 & 0.03 & 0.12 & 0.09 & 0.74 & 0.17 & 0.01 & 0.31 & 0.09 & 0.84 & 0.34 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & last\_layer & 32 & mha\_pool\_4\_heads & brier & 0.27 & 0.09 & 0.82 & 0.31 & 0.02 & 0.15 & 0.06 & 0.75 & 0.18 & 0.02 & 0.30 & 0.11 & 0.84 & 0.35 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & last\_layer & 64 & max\_pool & bce & 0.22 & 0.12 & 0.81 & 0.29 & 0.02 & 0.15 & 0.06 & 0.75 & 0.17 & 0.02 & 0.26 & 0.14 & 0.84 & 0.34 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & last\_layer & 64 & max\_pool & fl2 & 0.24 & 0.09 & 0.81 & 0.29 & 0.03 & 0.11 & 0.10 & 0.74 & 0.16 & 0.02 & 0.33 & 0.08 & 0.84 & 0.35 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & last\_layer & 64 & max\_pool & brier & 0.27 & 0.08 & 0.82 & 0.30 & 0.02 & 0.16 & 0.04 & 0.75 & 0.17 & 0.02 & 0.28 & 0.10 & 0.83 & 0.32 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & last\_layer & 64 & avg\_pool & bce & 0.28 & 0.06 & 0.82 & 0.30 & 0.03 & 0.07 & 0.14 & 0.75 & 0.18 & 0.02 & 0.27 & 0.14 & 0.85 & 0.36 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & last\_layer & 64 & avg\_pool & fl2 & 0.16 & 0.15 & 0.81 & 0.29 & 0.02 & 0.10 & 0.11 & 0.75 & 0.18 & 0.02 & 0.13 & 0.19 & 0.84 & 0.35 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & last\_layer & 64 & avg\_pool & brier & 0.29 & 0.06 & 0.82 & 0.30 & 0.04 & 0.06 & 0.12 & 0.74 & 0.12 & 0.07 & 0.28 & 0.13 & 0.85 & 0.36 & 0.04 \\
+Qwen/Qwen2.5-Coder-0.5B & last\_layer & 64 & mha\_pool\_4\_heads & bce & 0.26 & 0.08 & 0.82 & 0.30 & 0.02 & 0.17 & 0.06 & 0.76 & 0.19 & 0.02 & 0.27 & 0.13 & 0.84 & 0.33 & 0.07 \\
+Qwen/Qwen2.5-Coder-0.5B & last\_layer & 64 & mha\_pool\_4\_heads & fl2 & 0.24 & 0.09 & 0.81 & 0.28 & 0.02 & 0.12 & 0.09 & 0.75 & 0.17 & 0.02 & 0.30 & 0.10 & 0.84 & 0.33 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & last\_layer & 64 & mha\_pool\_4\_heads & brier & 0.28 & 0.08 & 0.82 & 0.30 & 0.02 & 0.17 & 0.06 & 0.76 & 0.19 & 0.02 & 0.29 & 0.10 & 0.83 & 0.31 & 0.04 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters & 32 & max\_pool & bce & 0.31 & 0.05 & 0.83 & 0.33 & 0.02 & 0.22 & 0.03 & 0.78 & 0.23 & 0.02 & 0.36 & 0.10 & 0.86 & 0.39 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters & 32 & max\_pool & fl2 & 0.23 & 0.13 & 0.83 & 0.32 & 0.02 & 0.13 & 0.12 & 0.77 & 0.21 & 0.02 & 0.32 & 0.11 & 0.86 & 0.37 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters & 32 & max\_pool & brier & 0.32 & 0.04 & 0.83 & 0.33 & 0.02 & 0.22 & 0.04 & 0.78 & 0.23 & 0.02 & 0.38 & 0.07 & 0.86 & 0.39 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters & 32 & avg\_pool & bce & 0.31 & 0.05 & 0.83 & 0.32 & 0.02 & 0.13 & 0.15 & 0.79 & 0.24 & 0.02 & 0.27 & 0.16 & 0.86 & 0.39 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters & 32 & avg\_pool & fl2 & 0.18 & 0.15 & 0.82 & 0.31 & 0.02 & 0.07 & 0.17 & 0.79 & 0.23 & 0.01 & 0.18 & 0.19 & 0.86 & 0.38 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters & 32 & avg\_pool & brier & 0.27 & 0.09 & 0.82 & 0.31 & 0.03 & 0.06 & 0.17 & 0.78 & 0.21 & 0.04 & 0.29 & 0.14 & 0.86 & 0.39 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters & 32 & mha\_pool\_4\_heads & bce & 0.31 & 0.05 & 0.83 & 0.32 & 0.02 & 0.23 & 0.04 & 0.79 & 0.24 & 0.02 & 0.35 & 0.09 & 0.86 & 0.37 & 0.04 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters & 32 & mha\_pool\_4\_heads & fl2 & 0.21 & 0.14 & 0.83 & 0.32 & 0.02 & 0.14 & 0.11 & 0.78 & 0.22 & 0.02 & 0.27 & 0.15 & 0.86 & 0.39 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters & 32 & mha\_pool\_4\_heads & brier & 0.29 & 0.06 & 0.82 & 0.31 & 0.02 & 0.22 & 0.05 & 0.79 & 0.23 & 0.01 & 0.35 & 0.08 & 0.85 & 0.36 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters & 64 & max\_pool & bce & 0.32 & 0.05 & 0.84 & 0.33 & 0.02 & 0.23 & 0.04 & 0.79 & 0.23 & 0.02 & 0.37 & 0.09 & 0.86 & 0.40 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters & 64 & max\_pool & fl2 & 0.25 & 0.11 & 0.83 & 0.32 & 0.02 & 0.12 & 0.13 & 0.78 & 0.22 & 0.02 & 0.35 & 0.12 & 0.87 & 0.39 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters & 64 & max\_pool & brier & 0.28 & 0.09 & 0.83 & 0.33 & 0.02 & 0.21 & 0.06 & 0.78 & 0.23 & 0.02 & 0.35 & 0.10 & 0.87 & 0.40 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters & 64 & avg\_pool & bce & 0.29 & 0.07 & 0.83 & 0.32 & 0.02 & 0.10 & 0.16 & 0.79 & 0.24 & 0.02 & 0.30 & 0.13 & 0.86 & 0.38 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters & 64 & avg\_pool & fl2 & 0.17 & 0.16 & 0.82 & 0.30 & 0.02 & 0.09 & 0.16 & 0.78 & 0.23 & 0.01 & 0.16 & 0.20 & 0.86 & 0.38 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters & 64 & avg\_pool & brier & 0.31 & 0.05 & 0.83 & 0.32 & 0.03 & 0.12 & 0.15 & 0.78 & 0.21 & 0.04 & 0.30 & 0.13 & 0.87 & 0.40 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters & 64 & mha\_pool\_4\_heads & bce & 0.28 & 0.08 & 0.83 & 0.32 & 0.02 & 0.21 & 0.05 & 0.79 & 0.24 & 0.02 & 0.32 & 0.11 & 0.85 & 0.35 & 0.07 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters & 64 & mha\_pool\_4\_heads & fl2 & 0.24 & 0.13 & 0.83 & 0.33 & 0.02 & 0.14 & 0.12 & 0.78 & 0.23 & 0.02 & 0.31 & 0.15 & 0.86 & 0.40 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters & 64 & mha\_pool\_4\_heads & brier & 0.31 & 0.05 & 0.83 & 0.32 & 0.02 & 0.23 & 0.04 & 0.79 & 0.24 & 0.01 & 0.34 & 0.09 & 0.85 & 0.37 & 0.04 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters\_and\_middle & 32 & max\_pool & bce & 0.31 & 0.06 & 0.83 & 0.33 & 0.02 & 0.23 & 0.04 & 0.79 & 0.24 & 0.02 & 0.37 & 0.09 & 0.87 & 0.40 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters\_and\_middle & 32 & max\_pool & fl2 & 0.23 & 0.13 & 0.83 & 0.32 & 0.02 & 0.13 & 0.12 & 0.78 & 0.22 & 0.02 & 0.31 & 0.11 & 0.85 & 0.37 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters\_and\_middle & 32 & max\_pool & brier & 0.28 & 0.08 & 0.83 & 0.32 & 0.02 & 0.21 & 0.06 & 0.79 & 0.23 & 0.02 & 0.33 & 0.10 & 0.86 & 0.39 & 0.04 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters\_and\_middle & 32 & avg\_pool & bce & 0.27 & 0.09 & 0.82 & 0.32 & 0.03 & 0.20 & 0.09 & 0.79 & 0.24 & 0.02 & 0.18 & 0.20 & 0.86 & 0.38 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters\_and\_middle & 32 & avg\_pool & fl2 & 0.15 & 0.16 & 0.82 & 0.30 & 0.02 & 0.10 & 0.15 & 0.78 & 0.23 & 0.01 & 0.14 & 0.21 & 0.86 & 0.38 & 0.07 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters\_and\_middle & 32 & avg\_pool & brier & 0.30 & 0.06 & 0.83 & 0.32 & 0.03 & 0.14 & 0.14 & 0.78 & 0.22 & 0.04 & 0.28 & 0.14 & 0.86 & 0.39 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters\_and\_middle & 32 & mha\_pool\_4\_heads & bce & 0.29 & 0.08 & 0.83 & 0.32 & 0.02 & 0.22 & 0.07 & 0.79 & 0.24 & 0.01 & 0.35 & 0.09 & 0.86 & 0.38 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters\_and\_middle & 32 & mha\_pool\_4\_heads & fl2 & 0.22 & 0.14 & 0.83 & 0.33 & 0.02 & 0.13 & 0.13 & 0.79 & 0.24 & 0.02 & 0.30 & 0.15 & 0.86 & 0.39 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters\_and\_middle & 32 & mha\_pool\_4\_heads & brier & 0.29 & 0.07 & 0.83 & 0.33 & 0.02 & 0.21 & 0.07 & 0.79 & 0.24 & 0.02 & 0.39 & 0.07 & 0.87 & 0.39 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters\_and\_middle & 64 & max\_pool & bce & 0.30 & 0.06 & 0.83 & 0.32 & 0.02 & 0.22 & 0.04 & 0.79 & 0.23 & 0.02 & 0.34 & 0.11 & 0.86 & 0.38 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters\_and\_middle & 64 & max\_pool & fl2 & 0.23 & 0.13 & 0.82 & 0.31 & 0.02 & 0.14 & 0.12 & 0.78 & 0.22 & 0.02 & 0.32 & 0.13 & 0.86 & 0.39 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters\_and\_middle & 64 & max\_pool & brier & 0.31 & 0.04 & 0.82 & 0.31 & 0.02 & 0.22 & 0.04 & 0.78 & 0.23 & 0.02 & 0.37 & 0.08 & 0.86 & 0.39 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters\_and\_middle & 64 & avg\_pool & bce & 0.28 & 0.08 & 0.83 & 0.32 & 0.02 & 0.13 & 0.14 & 0.79 & 0.24 & 0.02 & 0.25 & 0.16 & 0.86 & 0.39 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters\_and\_middle & 64 & avg\_pool & fl2 & 0.16 & 0.16 & 0.82 & 0.31 & 0.02 & 0.07 & 0.16 & 0.78 & 0.23 & 0.02 & 0.15 & 0.20 & 0.86 & 0.38 & 0.07 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters\_and\_middle & 64 & avg\_pool & brier & 0.27 & 0.08 & 0.82 & 0.31 & 0.03 & 0.16 & 0.12 & 0.79 & 0.23 & 0.04 & 0.25 & 0.15 & 0.86 & 0.39 & 0.05 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters\_and\_middle & 64 & mha\_pool\_4\_heads & bce & 0.30 & 0.06 & 0.83 & 0.33 & 0.02 & 0.22 & 0.05 & 0.79 & 0.24 & 0.01 & 0.34 & 0.11 & 0.86 & 0.39 & 0.06 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters\_and\_middle & 64 & mha\_pool\_4\_heads & fl2 & 0.23 & 0.14 & 0.83 & 0.33 & 0.02 & 0.14 & 0.12 & 0.79 & 0.23 & 0.02 & 0.29 & 0.15 & 0.87 & 0.40 & 0.04 \\
+Qwen/Qwen2.5-Coder-0.5B & shifted\_three\_quarters\_and\_middle & 64 & mha\_pool\_4\_heads & brier & 0.32 & 0.04 & 0.83 & 0.33 & 0.02 & 0.24 & 0.03 & 0.79 & 0.24 & 0.01 & 0.38 & 0.06 & 0.85 & 0.38 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & middle\_layer & 32 & max\_pool & bce & 0.29 & 0.09 & 0.84 & 0.34 & 0.02 & 0.23 & 0.06 & 0.80 & 0.25 & 0.02 & 0.29 & 0.15 & 0.86 & 0.38 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & middle\_layer & 32 & max\_pool & fl2 & 0.29 & 0.10 & 0.83 & 0.33 & 0.03 & 0.18 & 0.10 & 0.79 & 0.24 & 0.03 & 0.36 & 0.07 & 0.85 & 0.37 & 0.06 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & middle\_layer & 32 & max\_pool & brier & 0.29 & 0.08 & 0.83 & 0.33 & 0.02 & 0.23 & 0.05 & 0.79 & 0.25 & 0.02 & 0.31 & 0.12 & 0.85 & 0.37 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & middle\_layer & 32 & avg\_pool & bce & 0.32 & 0.05 & 0.84 & 0.34 & 0.02 & 0.11 & 0.15 & 0.80 & 0.25 & 0.02 & 0.29 & 0.15 & 0.86 & 0.38 & 0.07 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & middle\_layer & 32 & avg\_pool & fl2 & 0.22 & 0.15 & 0.83 & 0.34 & 0.03 & 0.12 & 0.15 & 0.79 & 0.25 & 0.02 & 0.19 & 0.19 & 0.86 & 0.37 & 0.06 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & middle\_layer & 32 & avg\_pool & brier & 0.31 & 0.06 & 0.83 & 0.32 & 0.03 & 0.10 & 0.14 & 0.78 & 0.22 & 0.04 & 0.33 & 0.13 & 0.87 & 0.40 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & middle\_layer & 32 & mha\_pool\_4\_heads & bce & 0.30 & 0.08 & 0.84 & 0.34 & 0.02 & 0.24 & 0.07 & 0.80 & 0.26 & 0.01 & 0.34 & 0.12 & 0.87 & 0.39 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & middle\_layer & 32 & mha\_pool\_4\_heads & fl2 & 0.28 & 0.10 & 0.84 & 0.34 & 0.02 & 0.19 & 0.10 & 0.79 & 0.24 & 0.01 & 0.37 & 0.10 & 0.87 & 0.40 & 0.06 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & middle\_layer & 32 & mha\_pool\_4\_heads & brier & 0.32 & 0.06 & 0.84 & 0.34 & 0.02 & 0.23 & 0.06 & 0.80 & 0.25 & 0.01 & 0.32 & 0.10 & 0.85 & 0.36 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & middle\_layer & 64 & max\_pool & bce & 0.29 & 0.10 & 0.84 & 0.35 & 0.02 & 0.24 & 0.06 & 0.80 & 0.26 & 0.02 & 0.30 & 0.14 & 0.86 & 0.38 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & middle\_layer & 64 & max\_pool & fl2 & 0.29 & 0.10 & 0.84 & 0.34 & 0.02 & 0.17 & 0.11 & 0.79 & 0.24 & 0.02 & 0.37 & 0.08 & 0.86 & 0.39 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & middle\_layer & 64 & max\_pool & brier & 0.29 & 0.09 & 0.83 & 0.33 & 0.02 & 0.23 & 0.05 & 0.80 & 0.25 & 0.03 & 0.33 & 0.11 & 0.85 & 0.37 & 0.06 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & middle\_layer & 64 & avg\_pool & bce & 0.35 & 0.04 & 0.84 & 0.36 & 0.02 & 0.15 & 0.14 & 0.80 & 0.26 & 0.02 & 0.29 & 0.16 & 0.86 & 0.39 & 0.06 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & middle\_layer & 64 & avg\_pool & fl2 & 0.22 & 0.15 & 0.83 & 0.33 & 0.03 & 0.11 & 0.15 & 0.79 & 0.24 & 0.02 & 0.21 & 0.18 & 0.86 & 0.38 & 0.07 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & middle\_layer & 64 & avg\_pool & brier & 0.31 & 0.06 & 0.83 & 0.33 & 0.04 & 0.12 & 0.14 & 0.78 & 0.22 & 0.04 & 0.31 & 0.13 & 0.86 & 0.39 & 0.06 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & middle\_layer & 64 & mha\_pool\_4\_heads & bce & 0.29 & 0.08 & 0.83 & 0.33 & 0.02 & 0.22 & 0.07 & 0.79 & 0.25 & 0.02 & 0.31 & 0.13 & 0.86 & 0.37 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & middle\_layer & 64 & mha\_pool\_4\_heads & fl2 & 0.29 & 0.11 & 0.84 & 0.34 & 0.02 & 0.20 & 0.10 & 0.79 & 0.25 & 0.01 & 0.35 & 0.08 & 0.85 & 0.37 & 0.06 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & middle\_layer & 64 & mha\_pool\_4\_heads & brier & 0.30 & 0.08 & 0.83 & 0.34 & 0.02 & 0.23 & 0.06 & 0.80 & 0.25 & 0.02 & 0.35 & 0.10 & 0.86 & 0.37 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & three\_quarters\_layer & 32 & max\_pool & bce & 0.31 & 0.10 & 0.85 & 0.36 & 0.02 & 0.27 & 0.05 & 0.82 & 0.29 & 0.02 & 0.41 & 0.12 & 0.89 & 0.46 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & three\_quarters\_layer & 32 & max\_pool & fl2 & 0.32 & 0.10 & 0.85 & 0.37 & 0.02 & 0.20 & 0.12 & 0.81 & 0.28 & 0.02 & 0.43 & 0.08 & 0.88 & 0.44 & 0.06 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & three\_quarters\_layer & 32 & max\_pool & brier & 0.33 & 0.09 & 0.85 & 0.37 & 0.02 & 0.26 & 0.06 & 0.82 & 0.29 & 0.02 & 0.42 & 0.10 & 0.89 & 0.45 & 0.04 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & three\_quarters\_layer & 32 & avg\_pool & bce & 0.35 & 0.06 & 0.85 & 0.37 & 0.02 & 0.14 & 0.15 & 0.81 & 0.27 & 0.02 & 0.36 & 0.15 & 0.89 & 0.46 & 0.06 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & three\_quarters\_layer & 32 & avg\_pool & fl2 & 0.26 & 0.14 & 0.85 & 0.37 & 0.03 & 0.13 & 0.16 & 0.81 & 0.27 & 0.02 & 0.28 & 0.19 & 0.90 & 0.47 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & three\_quarters\_layer & 32 & avg\_pool & brier & 0.34 & 0.07 & 0.85 & 0.36 & 0.04 & 0.09 & 0.17 & 0.80 & 0.25 & 0.05 & 0.43 & 0.09 & 0.90 & 0.48 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & three\_quarters\_layer & 32 & mha\_pool\_4\_heads & bce & 0.30 & 0.11 & 0.85 & 0.37 & 0.02 & 0.24 & 0.08 & 0.82 & 0.29 & 0.02 & 0.39 & 0.12 & 0.89 & 0.46 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & three\_quarters\_layer & 32 & mha\_pool\_4\_heads & fl2 & 0.29 & 0.10 & 0.84 & 0.35 & 0.02 & 0.20 & 0.11 & 0.81 & 0.27 & 0.02 & 0.43 & 0.10 & 0.89 & 0.45 & 0.07 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & three\_quarters\_layer & 32 & mha\_pool\_4\_heads & brier & 0.34 & 0.08 & 0.85 & 0.38 & 0.02 & 0.27 & 0.07 & 0.82 & 0.30 & 0.01 & 0.40 & 0.11 & 0.88 & 0.43 & 0.06 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & three\_quarters\_layer & 64 & max\_pool & bce & 0.33 & 0.09 & 0.85 & 0.37 & 0.02 & 0.28 & 0.05 & 0.82 & 0.29 & 0.02 & 0.42 & 0.12 & 0.89 & 0.47 & 0.06 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & three\_quarters\_layer & 64 & max\_pool & fl2 & 0.32 & 0.10 & 0.84 & 0.36 & 0.02 & 0.20 & 0.12 & 0.81 & 0.28 & 0.02 & 0.44 & 0.09 & 0.89 & 0.46 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & three\_quarters\_layer & 64 & max\_pool & brier & 0.36 & 0.07 & 0.86 & 0.39 & 0.02 & 0.30 & 0.04 & 0.83 & 0.31 & 0.02 & 0.43 & 0.11 & 0.90 & 0.47 & 0.04 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & three\_quarters\_layer & 64 & avg\_pool & bce & 0.35 & 0.06 & 0.85 & 0.37 & 0.02 & 0.19 & 0.13 & 0.81 & 0.28 & 0.02 & 0.32 & 0.17 & 0.89 & 0.46 & 0.06 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & three\_quarters\_layer & 64 & avg\_pool & fl2 & 0.25 & 0.15 & 0.85 & 0.36 & 0.02 & 0.17 & 0.14 & 0.81 & 0.28 & 0.02 & 0.25 & 0.20 & 0.90 & 0.47 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & three\_quarters\_layer & 64 & avg\_pool & brier & 0.36 & 0.05 & 0.86 & 0.38 & 0.04 & 0.17 & 0.13 & 0.80 & 0.25 & 0.06 & 0.41 & 0.13 & 0.90 & 0.48 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & three\_quarters\_layer & 64 & mha\_pool\_4\_heads & bce & 0.32 & 0.08 & 0.84 & 0.36 & 0.02 & 0.27 & 0.07 & 0.82 & 0.30 & 0.01 & 0.38 & 0.12 & 0.88 & 0.44 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & three\_quarters\_layer & 64 & mha\_pool\_4\_heads & fl2 & 0.31 & 0.11 & 0.85 & 0.37 & 0.03 & 0.22 & 0.11 & 0.81 & 0.28 & 0.02 & 0.42 & 0.08 & 0.88 & 0.44 & 0.06 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & three\_quarters\_layer & 64 & mha\_pool\_4\_heads & brier & 0.33 & 0.08 & 0.85 & 0.37 & 0.02 & 0.26 & 0.07 & 0.82 & 0.29 & 0.01 & 0.43 & 0.09 & 0.89 & 0.46 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & last\_layer & 32 & max\_pool & bce & 0.33 & 0.09 & 0.85 & 0.37 & 0.03 & 0.23 & 0.05 & 0.80 & 0.25 & 0.03 & 0.38 & 0.12 & 0.88 & 0.45 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & last\_layer & 32 & max\_pool & fl2 & 0.31 & 0.08 & 0.84 & 0.35 & 0.02 & 0.16 & 0.11 & 0.79 & 0.23 & 0.03 & 0.40 & 0.09 & 0.88 & 0.43 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & last\_layer & 32 & max\_pool & brier & 0.32 & 0.09 & 0.85 & 0.37 & 0.02 & 0.22 & 0.07 & 0.79 & 0.24 & 0.03 & 0.38 & 0.11 & 0.88 & 0.42 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & last\_layer & 32 & avg\_pool & bce & 0.34 & 0.07 & 0.85 & 0.36 & 0.02 & 0.15 & 0.13 & 0.79 & 0.24 & 0.02 & 0.29 & 0.17 & 0.89 & 0.46 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & last\_layer & 32 & avg\_pool & fl2 & 0.22 & 0.15 & 0.84 & 0.34 & 0.02 & 0.10 & 0.15 & 0.79 & 0.24 & 0.02 & 0.23 & 0.21 & 0.89 & 0.45 & 0.06 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & last\_layer & 32 & avg\_pool & brier & 0.32 & 0.08 & 0.85 & 0.36 & 0.04 & 0.05 & 0.16 & 0.77 & 0.19 & 0.07 & 0.40 & 0.11 & 0.89 & 0.47 & 0.04 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & last\_layer & 32 & mha\_pool\_4\_heads & bce & 0.27 & 0.10 & 0.83 & 0.34 & 0.02 & 0.20 & 0.08 & 0.79 & 0.24 & 0.02 & 0.39 & 0.12 & 0.88 & 0.43 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & last\_layer & 32 & mha\_pool\_4\_heads & fl2 & 0.30 & 0.09 & 0.84 & 0.34 & 0.02 & 0.17 & 0.11 & 0.79 & 0.24 & 0.02 & 0.40 & 0.09 & 0.88 & 0.43 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & last\_layer & 32 & mha\_pool\_4\_heads & brier & 0.32 & 0.07 & 0.84 & 0.35 & 0.02 & 0.24 & 0.06 & 0.80 & 0.26 & 0.02 & 0.38 & 0.09 & 0.87 & 0.39 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & last\_layer & 64 & max\_pool & bce & 0.30 & 0.09 & 0.84 & 0.35 & 0.02 & 0.22 & 0.05 & 0.79 & 0.24 & 0.02 & 0.37 & 0.13 & 0.88 & 0.44 & 0.06 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & last\_layer & 64 & max\_pool & fl2 & 0.30 & 0.11 & 0.85 & 0.36 & 0.03 & 0.16 & 0.11 & 0.79 & 0.23 & 0.03 & 0.41 & 0.09 & 0.88 & 0.44 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & last\_layer & 64 & max\_pool & brier & 0.32 & 0.08 & 0.84 & 0.36 & 0.03 & 0.22 & 0.06 & 0.79 & 0.24 & 0.03 & 0.36 & 0.12 & 0.88 & 0.43 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & last\_layer & 64 & avg\_pool & bce & 0.34 & 0.06 & 0.85 & 0.36 & 0.02 & 0.15 & 0.13 & 0.80 & 0.25 & 0.02 & 0.31 & 0.17 & 0.89 & 0.46 & 0.06 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & last\_layer & 64 & avg\_pool & fl2 & 0.20 & 0.16 & 0.84 & 0.35 & 0.02 & 0.08 & 0.16 & 0.79 & 0.24 & 0.02 & 0.21 & 0.21 & 0.89 & 0.45 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & last\_layer & 64 & avg\_pool & brier & 0.33 & 0.08 & 0.85 & 0.36 & 0.04 & 0.07 & 0.15 & 0.78 & 0.20 & 0.07 & 0.39 & 0.12 & 0.90 & 0.47 & 0.06 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & last\_layer & 64 & mha\_pool\_4\_heads & bce & 0.31 & 0.08 & 0.84 & 0.34 & 0.02 & 0.24 & 0.05 & 0.80 & 0.25 & 0.02 & 0.38 & 0.11 & 0.87 & 0.42 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & last\_layer & 64 & mha\_pool\_4\_heads & fl2 & 0.28 & 0.10 & 0.84 & 0.34 & 0.02 & 0.19 & 0.10 & 0.79 & 0.24 & 0.02 & 0.38 & 0.11 & 0.88 & 0.43 & 0.06 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & last\_layer & 64 & mha\_pool\_4\_heads & brier & 0.30 & 0.09 & 0.84 & 0.34 & 0.02 & 0.23 & 0.07 & 0.80 & 0.26 & 0.02 & 0.35 & 0.11 & 0.86 & 0.39 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & shifted\_three\_quarters & 32 & max\_pool & bce & 0.29 & 0.11 & 0.85 & 0.36 & 0.03 & 0.25 & 0.08 & 0.82 & 0.30 & 0.02 & 0.37 & 0.14 & 0.89 & 0.46 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & shifted\_three\_quarters & 32 & max\_pool & fl2 & 0.31 & 0.10 & 0.85 & 0.37 & 0.02 & 0.21 & 0.11 & 0.81 & 0.28 & 0.03 & 0.40 & 0.08 & 0.88 & 0.43 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & shifted\_three\_quarters & 32 & max\_pool & brier & 0.35 & 0.07 & 0.85 & 0.37 & 0.02 & 0.28 & 0.05 & 0.82 & 0.29 & 0.02 & 0.42 & 0.11 & 0.89 & 0.46 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & shifted\_three\_quarters & 32 & avg\_pool & bce & 0.33 & 0.07 & 0.85 & 0.36 & 0.02 & 0.18 & 0.13 & 0.81 & 0.28 & 0.02 & 0.30 & 0.17 & 0.88 & 0.43 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & shifted\_three\_quarters & 32 & avg\_pool & fl2 & 0.25 & 0.14 & 0.85 & 0.36 & 0.02 & 0.14 & 0.16 & 0.82 & 0.29 & 0.02 & 0.25 & 0.21 & 0.89 & 0.46 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & shifted\_three\_quarters & 32 & avg\_pool & brier & 0.35 & 0.06 & 0.85 & 0.36 & 0.05 & 0.11 & 0.16 & 0.81 & 0.25 & 0.05 & 0.42 & 0.10 & 0.90 & 0.47 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & shifted\_three\_quarters & 32 & mha\_pool\_4\_heads & bce & 0.30 & 0.11 & 0.84 & 0.35 & 0.02 & 0.26 & 0.08 & 0.82 & 0.29 & 0.02 & 0.37 & 0.12 & 0.89 & 0.45 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & shifted\_three\_quarters & 32 & mha\_pool\_4\_heads & fl2 & 0.32 & 0.10 & 0.85 & 0.37 & 0.02 & 0.23 & 0.10 & 0.81 & 0.29 & 0.02 & 0.41 & 0.11 & 0.89 & 0.46 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & shifted\_three\_quarters & 32 & mha\_pool\_4\_heads & brier & 0.31 & 0.10 & 0.85 & 0.37 & 0.02 & 0.25 & 0.09 & 0.82 & 0.31 & 0.01 & 0.39 & 0.11 & 0.88 & 0.44 & 0.06 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & shifted\_three\_quarters & 64 & max\_pool & bce & 0.29 & 0.10 & 0.84 & 0.34 & 0.02 & 0.26 & 0.05 & 0.81 & 0.28 & 0.02 & 0.30 & 0.15 & 0.88 & 0.42 & 0.06 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & shifted\_three\_quarters & 64 & max\_pool & fl2 & 0.30 & 0.11 & 0.85 & 0.36 & 0.02 & 0.21 & 0.11 & 0.81 & 0.27 & 0.02 & 0.42 & 0.08 & 0.88 & 0.44 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & shifted\_three\_quarters & 64 & max\_pool & brier & 0.35 & 0.07 & 0.85 & 0.38 & 0.02 & 0.29 & 0.03 & 0.82 & 0.30 & 0.02 & 0.39 & 0.12 & 0.88 & 0.45 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & shifted\_three\_quarters & 64 & avg\_pool & bce & 0.35 & 0.07 & 0.85 & 0.37 & 0.03 & 0.18 & 0.14 & 0.81 & 0.28 & 0.02 & 0.32 & 0.16 & 0.89 & 0.46 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & shifted\_three\_quarters & 64 & avg\_pool & fl2 & 0.22 & 0.16 & 0.84 & 0.35 & 0.02 & 0.16 & 0.14 & 0.81 & 0.27 & 0.02 & 0.21 & 0.22 & 0.89 & 0.45 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & shifted\_three\_quarters & 64 & avg\_pool & brier & 0.34 & 0.06 & 0.84 & 0.35 & 0.05 & 0.13 & 0.14 & 0.80 & 0.24 & 0.06 & 0.41 & 0.10 & 0.89 & 0.46 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & shifted\_three\_quarters & 64 & mha\_pool\_4\_heads & bce & 0.28 & 0.11 & 0.84 & 0.36 & 0.02 & 0.27 & 0.07 & 0.82 & 0.30 & 0.01 & 0.36 & 0.13 & 0.89 & 0.45 & 0.04 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & shifted\_three\_quarters & 64 & mha\_pool\_4\_heads & fl2 & 0.31 & 0.10 & 0.84 & 0.35 & 0.02 & 0.24 & 0.10 & 0.82 & 0.29 & 0.01 & 0.41 & 0.09 & 0.88 & 0.43 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & shifted\_three\_quarters & 64 & mha\_pool\_4\_heads & brier & 0.34 & 0.08 & 0.85 & 0.37 & 0.02 & 0.28 & 0.07 & 0.82 & 0.31 & 0.01 & 0.42 & 0.09 & 0.88 & 0.44 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & shifted\_three\_quarters\_and\_middle & 32 & max\_pool & bce & 0.33 & 0.09 & 0.86 & 0.38 & 0.02 & 0.27 & 0.07 & 0.82 & 0.30 & 0.02 & 0.41 & 0.11 & 0.89 & 0.47 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & shifted\_three\_quarters\_and\_middle & 32 & max\_pool & fl2 & 0.31 & 0.11 & 0.85 & 0.38 & 0.02 & 0.21 & 0.11 & 0.81 & 0.28 & 0.02 & 0.43 & 0.07 & 0.88 & 0.45 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & shifted\_three\_quarters\_and\_middle & 32 & max\_pool & brier & 0.37 & 0.07 & 0.86 & 0.39 & 0.02 & 0.29 & 0.04 & 0.82 & 0.30 & 0.02 & 0.42 & 0.11 & 0.89 & 0.47 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & shifted\_three\_quarters\_and\_middle & 32 & avg\_pool & bce & 0.35 & 0.07 & 0.85 & 0.38 & 0.03 & 0.13 & 0.15 & 0.81 & 0.27 & 0.02 & 0.35 & 0.14 & 0.89 & 0.44 & 0.06 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & shifted\_three\_quarters\_and\_middle & 32 & avg\_pool & fl2 & 0.24 & 0.15 & 0.85 & 0.36 & 0.03 & 0.14 & 0.15 & 0.81 & 0.27 & 0.02 & 0.24 & 0.20 & 0.88 & 0.44 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & shifted\_three\_quarters\_and\_middle & 32 & avg\_pool & brier & 0.36 & 0.07 & 0.86 & 0.37 & 0.04 & 0.08 & 0.18 & 0.81 & 0.27 & 0.04 & 0.44 & 0.09 & 0.90 & 0.48 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & shifted\_three\_quarters\_and\_middle & 32 & mha\_pool\_4\_heads & bce & 0.32 & 0.09 & 0.85 & 0.36 & 0.02 & 0.25 & 0.08 & 0.81 & 0.28 & 0.01 & 0.33 & 0.14 & 0.88 & 0.42 & 0.06 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & shifted\_three\_quarters\_and\_middle & 32 & mha\_pool\_4\_heads & fl2 & 0.30 & 0.10 & 0.84 & 0.35 & 0.03 & 0.21 & 0.10 & 0.81 & 0.27 & 0.01 & 0.39 & 0.10 & 0.88 & 0.43 & 0.06 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & shifted\_three\_quarters\_and\_middle & 32 & mha\_pool\_4\_heads & brier & 0.33 & 0.08 & 0.85 & 0.37 & 0.02 & 0.26 & 0.08 & 0.82 & 0.30 & 0.01 & 0.37 & 0.11 & 0.87 & 0.42 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & shifted\_three\_quarters\_and\_middle & 64 & max\_pool & bce & 0.34 & 0.09 & 0.85 & 0.38 & 0.02 & 0.27 & 0.06 & 0.82 & 0.29 & 0.02 & 0.39 & 0.12 & 0.89 & 0.46 & 0.06 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & shifted\_three\_quarters\_and\_middle & 64 & max\_pool & fl2 & 0.33 & 0.09 & 0.85 & 0.37 & 0.03 & 0.20 & 0.11 & 0.81 & 0.28 & 0.02 & 0.44 & 0.09 & 0.89 & 0.46 & 0.06 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & shifted\_three\_quarters\_and\_middle & 64 & max\_pool & brier & 0.36 & 0.09 & 0.86 & 0.40 & 0.02 & 0.28 & 0.05 & 0.82 & 0.30 & 0.03 & 0.41 & 0.11 & 0.88 & 0.45 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & shifted\_three\_quarters\_and\_middle & 64 & avg\_pool & bce & 0.35 & 0.05 & 0.84 & 0.36 & 0.03 & 0.13 & 0.17 & 0.81 & 0.28 & 0.02 & 0.37 & 0.13 & 0.88 & 0.44 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & shifted\_three\_quarters\_and\_middle & 64 & avg\_pool & fl2 & 0.23 & 0.14 & 0.84 & 0.35 & 0.02 & 0.15 & 0.14 & 0.80 & 0.27 & 0.02 & 0.23 & 0.20 & 0.89 & 0.44 & 0.05 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & shifted\_three\_quarters\_and\_middle & 64 & avg\_pool & brier & 0.36 & 0.06 & 0.85 & 0.37 & 0.03 & 0.10 & 0.17 & 0.80 & 0.26 & 0.05 & 0.42 & 0.09 & 0.89 & 0.46 & 0.04 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & shifted\_three\_quarters\_and\_middle & 64 & mha\_pool\_4\_heads & bce & 0.31 & 0.10 & 0.85 & 0.36 & 0.02 & 0.26 & 0.08 & 0.82 & 0.29 & 0.01 & 0.38 & 0.12 & 0.88 & 0.43 & 0.07 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & shifted\_three\_quarters\_and\_middle & 64 & mha\_pool\_4\_heads & fl2 & 0.31 & 0.10 & 0.85 & 0.36 & 0.02 & 0.24 & 0.09 & 0.82 & 0.29 & 0.01 & 0.42 & 0.09 & 0.88 & 0.43 & 0.06 \\
+Qwen/Qwen2.5-Coder-7B-Instruct & shifted\_three\_quarters\_and\_middle & 64 & mha\_pool\_4\_heads & brier & 0.34 & 0.08 & 0.85 & 0.37 & 0.02 & 0.28 & 0.07 & 0.83 & 0.31 & 0.01 & 0.39 & 0.10 & 0.88 & 0.42 & 0.07 \\
+\bottomrule
+\end{tabular}
+}%
+\caption{Large Probe Comparison Qwen2.5Code-7B-Inst}
+\label{tab:large_probe_compare_qwen7b}
+\end{table*}

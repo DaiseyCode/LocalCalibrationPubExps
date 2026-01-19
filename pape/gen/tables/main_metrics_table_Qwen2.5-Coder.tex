@@ -1,0 +1,27 @@
+% Generated on 2025-09-13 02:26:29 from git commit unknown
+
+\begin{table*}[htbp]
+% Note: Add \usepackage{booktabs}, \usepackage{amssymb}, \usepackage{multirow}, \usepackage{makecell}, and \usepackage{graphicx} to document preamble
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l c c c c c c c c c c}
+\toprule
+ & \multicolumn{5}{c}{Line-Level} & \multicolumn{5}{c}{Token-Level} \\
+ & \multicolumn{3}{c}{Unscaled} & \multicolumn{2}{c}{Scaled} & \multicolumn{3}{c}{Unscaled} & \multicolumn{2}{c}{Scaled} \\
+\cmidrule(lr){2-4}
+\cmidrule(lr){5-6}
+\cmidrule(lr){7-9}
+\cmidrule(lr){10-11}
+Technique & BSS $\uparrow$ & ECE $\downarrow$ & AUC $\uparrow$ & BSS $\uparrow$ & ECE $\downarrow$ & BSS $\uparrow$ & ECE $\downarrow$ & AUC $\uparrow$ & BSS $\uparrow$ & ECE $\downarrow$ \\
+\midrule
+Token Prob & -1.18 & 0.54 & 0.55 & 0.01 & 0.01 & -0.62 & 0.38 & 0.52 & 0.00 & 0.00 \\
+Multisampling & 0.01 & 0.17 & 0.72 & 0.13 & 0.04 & 0.06 & 0.14 & 0.74 & 0.17 & 0.04 \\
+Line Verbalized & -0.72 & 0.43 & 0.71 & 0.10 & 0.10 & -0.35 & 0.30 & 0.65 & 0.04 & 0.08 \\
+Probe-0.5B & 0.30 & 0.05 & 0.82 & 0.31 & 0.02 & 0.20 & 0.05 & 0.77 & 0.21 & 0.02 \\
+Probe-7B & 0.29 & 0.08 & 0.83 & 0.33 & 0.02 & 0.23 & 0.05 & 0.79 & 0.25 & 0.02 \\
+\bottomrule
+\end{tabular}
+}%
+\caption{Calibration Results for Qwen2.5-Coder-7B-Instruct with various techniques.}
+\label{tab:main_metrics_Qwen2.5_Coder}
+\end{table*}

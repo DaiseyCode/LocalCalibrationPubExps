@@ -1,0 +1,26 @@
+% Generated from git commit unknown
+
+\begin{table*}[htbp]
+% Note: Add \usepackage{booktabs}, \usepackage{amssymb}, \usepackage{multirow}, \usepackage{makecell}, and \usepackage{graphicx} to document preamble
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l l c c c c c c c c c}
+\toprule
+ &  & \multicolumn{3}{c}{Solve Step} & \multicolumn{4}{c}{Patch Step} & \multicolumn{2}{c}{Final Used Data} \\
+\cmidrule(lr){3-5}
+\cmidrule(lr){6-9}
+\cmidrule(lr){10-11}
+Model Name & Dataset & Available & Pass $\checkmark$ & Fail $\times$ & \makecell{Count\\w/ Model} & \makecell{Avg Toks\\w/ Model} & \makecell{Count\\w/ Ref} & \makecell{Avg Toks\\w/ Ref} & Problems & \makecell{Total\\Tokens} \\
+\midrule
+Qwen2.5Coder & HumanEval+ & 164 & 112 (68\%) & 52 & 44 & 6.7 (14\%) & 7 & 29.6 (64\%) & 163 & 8k \\
+Qwen2.5Coder & LiveCodeBench & 1055 & 217 (21\%) & 838 & 429 & 68.8 (43\%) & 0 & N/A & 646 & 73k \\
+Qwen2.5Coder & MBPP+ & 356 & 248 (70\%) & 108 & 75 & 7.6 (24\%) & 30 & 45.1 (72\%) & 353 & 12k \\
+Qwen2.5Coder & RepoCod-s & 200 & 31 (16\%) & 169 & 75 & 62.2 (38\%) & 87 & 119.0 (67\%) & 193 & 27k \\
+\midrule
+Qwen2.5Coder & Total & 1775 & 608 (34\%) & 1167 & 623 & 56.2 (38\%) & 124 & 96.1 (68\%) & 1355 & 120k \\
+\bottomrule
+\end{tabular}
+}%
+\caption{Descriptive statistics on the dataset contents split by source dataset for Qwen 2.5 Coder 7B Instruct. See above for more details on columns.}
+\label{tab:dataset_stats_qwen7b}
+\end{table*}

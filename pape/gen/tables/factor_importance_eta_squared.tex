@@ -1,0 +1,20 @@
+% Generated from git commit unknown
+
+\begin{table}[htbp]
+% Note: Add \usepackage{booktabs}, \usepackage{amssymb}, \usepackage{multirow}, and \usepackage{makecell} to document preamble
+\centering
+\begin{tabular}{c c c}
+\toprule
+Factor & Mean BSS $\eta^2$ & Mean ECE $\eta^2$ \\
+\midrule
+Gen Model & \textbf{0.599} & 0.004 \\
+Loss Style & 0.037 & \textbf{0.325} \\
+Agg Style & 0.025 & \textbf{0.304} \\
+Embedding LM & \textbf{0.186} & 0.005 \\
+Aggregator & 0.058 & 0.002 \\
+Hidden Dim & 0.000 & 0.001 \\
+\bottomrule
+\end{tabular}
+\caption{A comparison of probe model design choices. Factor importance analysis showing proportion of variance explained ($\eta^2$) for Mean BSS and Mean ECE metrics. The mean BSS is averaging 6 values, the token/line/problem level BSS for both scaled and unscaled. The Mean ECE is the mean of 3 values, the unscaled ECE (we exclude scaled ECE as it almost always is near 0). Higher $\eta^2$ indicates greater factor importance.}
+\label{tab:factor_importance_eta_squared}
+\end{table}

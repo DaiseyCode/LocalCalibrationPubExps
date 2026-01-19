@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/ingydotnet/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:DNGros/calipy.git
+	branch = main
+	commit = 203f5e678ef5e176409de6b5a7c18076f1fd7260
+	parent = 346b182a07f888b0f8aff1471940d8f63bab5986
+	method = merge
+	cmdver = 0.4.6

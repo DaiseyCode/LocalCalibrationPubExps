@@ -1,0 +1,26 @@
+% Generated from git commit unknown
+
+\begin{table*}[htbp]
+% Note: Add \usepackage{booktabs}, \usepackage{amssymb}, \usepackage{multirow}, \usepackage{makecell}, and \usepackage{graphicx} to document preamble
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l l c c c c c c c c c}
+\toprule
+ &  & \multicolumn{3}{c}{Solve Step} & \multicolumn{4}{c}{Patch Step} & \multicolumn{2}{c}{Final Used Data} \\
+\cmidrule(lr){3-5}
+\cmidrule(lr){6-9}
+\cmidrule(lr){10-11}
+Model Name & Dataset & Available & Pass $\checkmark$ & Fail $\times$ & \makecell{Count\\w/ Model} & \makecell{Avg Toks\\w/ Model} & \makecell{Count\\w/ Ref} & \makecell{Avg Toks\\w/ Ref} & Problems & \makecell{Total\\Tokens} \\
+\midrule
+gpt-4o & HumanEval+ & 164 & 139 (85\%) & 25 & 22 & 7.5 (16\%) & 2 & 25.0 (47\%) & 163 & 9k \\
+gpt-4o & LiveCodeBench & 1055 & 361 (34\%) & 694 & 293 & 97.3 (46\%) & 0 & N/A & 654 & 101k \\
+gpt-4o & MBPP+ & 356 & 273 (77\%) & 83 & 54 & 10.8 (18\%) & 26 & 54.6 (71\%) & 353 & 12k \\
+gpt-4o & RepoCod-s & 200 & 49 (24\%) & 151 & 65 & 44.1 (28\%) & 84 & 135.4 (64\%) & 198 & 29k \\
+\midrule
+gpt-4o & Total & 1775 & 822 (46\%) & 953 & 434 & 74.0 (39\%) & 112 & 114.7 (65\%) & 1368 & 152k \\
+\bottomrule
+\end{tabular}
+}%
+\caption{Descriptive statistics on the dataset contents split by source dataset for GPT-4o. The 'Solve Step Pass $\checkmark$' represents a Pass@1. The 'Patch Step Count' shows the number of failing solutions successfully patched. It split by whether the patch was generated with a model, or having to fallback on a reference solution.The 'Avg Tokens' shows the number tokens not kept in the patch along with what percent of the tokens in the solution were not kept. The model generated patches are typically more more minimal. Final data shows used problems and token totals. }
+\label{tab:dataset_stats_gpt_4o}
+\end{table*}
