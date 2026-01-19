@@ -21,6 +21,8 @@ for the figures and tables in the paper.
 All scripts expect to be run from project root. eg,
 `python -m pape.dataset_stats_table`
 
+CAUTION: some these scripts make a lot of OpenAI/Claude API calls. See notes.
+
 
 - `/pape/dataset_stats_table.py`
     - This makes the Table 1 and 2 for how many examples are each dataset
@@ -44,7 +46,9 @@ All scripts expect to be run from project root. eg,
     - Fully running from scratch requires docker setup
     - The current cache files aren't in this github. I still need to work out a better
       solution for this. Ideally like converting this to a HF parquet with must the key data.
-      Otherwise it is admitedly difficult to use.
+      Otherwise it is admitedly difficult to use. I have
+      some ideas for revisiting this work, and will try
+      to clean things up then (email me if something comes up sooner).
 - `pape/configs.py`
     - Used to setup details for many of the experiment.
 - `localizing/fix_adders.py`
