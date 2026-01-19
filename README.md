@@ -21,7 +21,7 @@ for the figures and tables in the paper.
 All scripts expect to be run from project root. eg,
 `python -m pape.dataset_stats_table`
 
-CAUTION: some these scripts make a lot of OpenAI/Claude API calls. See notes.
+CAUTION: some these scripts make a lot of OpenAI/Claude API calls if don't have the cache files loaded. See notes.
 
 
 - `/pape/dataset_stats_table.py`
